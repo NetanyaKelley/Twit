@@ -23,5 +23,5 @@ def chef():
 
     return (
         f"🍽️ The chef served {food}! DELICIOUS! "
-        f"🎉 @YourTwitchUsername, please award the winner 50 points!"
+        f"🎉 @sardyyyy, please award the winner 3000 points!"
     )
