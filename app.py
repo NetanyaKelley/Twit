@@ -5,8 +5,11 @@ from pathlib import Path
 
 app = Flask(__name__)
 
-foods_path = Path(__file__).with_name("foods.json")
+MODERATORS = [
+    "@sardyyyy",
+]
 
+foods_path = Path(__file__).with_name("foods.json")
 with open(foods_path, encoding="utf-8") as f:
     foods = json.load(f)
 
@@ -17,4 +20,8 @@ def chef():
         return f"🤢 The chef served {food}! DISGUSTING!"
 
     food = random.choice(foods["good_foods"])
-    return f"🍽️ The chef served {food}! DELICIOUS!"
+
+    return (
+        f"🍽️ The chef served {food}! DELICIOUS! "
+        f"🎉 @YourTwitchUsername, please award the winner 50 points!"
+    )
