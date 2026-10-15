@@ -15,7 +15,7 @@ with open(foods_path, encoding="utf-8") as f:
 
 @app.route("/chef")
 def chef():
-    if random.random() < 0.90:
+    if random.random() < 0.95:
         food = random.choice(foods["bad_foods"])
         return f"🤢 The chef served {food}! DISGUSTING!"
 
